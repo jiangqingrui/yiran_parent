@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: service-msm
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        file-extension: yml
+        group: DEV_GROUP
+        shared-configs:
+          - data-id: cloud.yml
+            group: COMMON_GROUP
+          - data-id: redis.yml
+            group: COMMON_GROUP
+

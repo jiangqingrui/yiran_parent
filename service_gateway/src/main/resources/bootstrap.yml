@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: yiran-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        file-extension: yml
+        group: DEV_GROUP
+        shared-configs:
+          - data-id: cloud.yml
+            group: COMMON_GROUP
